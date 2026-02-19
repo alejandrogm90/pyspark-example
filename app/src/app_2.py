@@ -1,3 +1,15 @@
+"""
+app_2.py
+
+Example using a csv input
+
+Functions:
+----------
+- create_dataframe_from_csv(ss, file_path): returns a DataFrame
+- get_average_population(df): returns a float average
+- get_cities_with_capital(df): returns a DataFrame
+
+"""
 import os
 import sys
 from typing import Optional
@@ -5,30 +17,46 @@ from typing import Optional
 from pyspark.sql import DataFrame, SparkSession
 
 
-def create_dataframe_from_csv(sesion, file_path) -> Optional[DataFrame]:
+def create_dataframe_from_csv(ss: SparkSession, file_path: str) -> Optional[DataFrame]:
+    """
+
+    :param ss: SparkSession
+    :param file_path: full file path
+    :return: DataFrame from file input
+    """
     try:
-        return sesion.read.csv(file_path, header=True, inferSchema=True)
-    except Exception as e:
+        return ss.read.csv(file_path, header=True, inferSchema=True)
+    except IOError as e:
         print(f"Error reading CSV: {e}")
         return None
 
 
-def get_average_population(df) -> DataFrame:
+def get_average_population(df: DataFrame) -> DataFrame:
+    """
+
+    :param df: DataFrame input
+    :return: average of colum 'poblacion'
+    """
     return df.agg({"poblacion": "avg"}).first()[0]
 
 
-def get_cities_with_capital(df) -> DataFrame:
+def get_cities_with_capital(df: DataFrame) -> DataFrame:
+    """
+
+    :param df: DataFrame input
+    :return:  DataFrame with only capitals
+    """
     #return df.filter(df.es_capital.cast("boolean") == True)
     return df.filter(df.es_capital == 1)  # Verifica que sea igual a 1 en lugar de True
 
 
 if __name__ == '__main__':
-    if sys.argv.__len__() < 2:
+    if len(sys.argv) < 2:
         print("File path must be given as argument.")
-        exit(1)
+        sys.exit(1)
     if not os.path.exists(sys.argv[1]):
         print(f"File not found in: {sys.argv[1]}")
-        exit(2)
+        sys.exit(2)
 
     spark = (SparkSession.builder.
              appName("CitiesExample").

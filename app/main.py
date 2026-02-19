@@ -1,3 +1,8 @@
+"""
+main.py
+
+Basic example
+"""
 from pyspark.sql import SparkSession
 
 # Inicializar una Spark Session

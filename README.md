@@ -76,6 +76,8 @@ Alejandro Gómez - [@alejandrogm90][profile-url]
 Project Link: [project-url]
 
 <!--
+pylint app/src/app_2.py
+
 pip freeze > requirements.txt
 pipreqs --force
 
