@@ -6,8 +6,8 @@
 [![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Python3_template
-Basic Python3 template
+# Pyspark-example
+Basic pyspark example
 
 ### Built With
 
@@ -25,13 +25,14 @@ To get a local copy up and running follow these simple example steps.
 You need install first:
 
 * _Python3_
+* _Docker-compose_
 
 ### Installation
 
 - Go to main project at [project-url]
 - Clone the repo:
 ```shell
-git clone https://github.com/alejandrogm90/python3_template.git
+git clone https://github.com/alejandrogm90/pyspark-example.git
 ```
 
 - Install all requirements:
@@ -41,9 +42,13 @@ pipenv update
 
 ## Usage
 On terminal:
-
+- Launch docker-compose
 ```shell
-pipenv run python main.py
+sudo make 
+```
+- Launch app2:
+```shell
+sudo make app2
 ```
 
 _For more examples, please refer to the [Documentation][wiki-url]_
@@ -85,21 +90,21 @@ pipenv run python -m unittest test/utils/test_common_functions.py
 -->
 
 [version-shield]: https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/alejandrogm90/coin-comparator.svg?style=for-the-badge
-[forks-shield]: https://img.shields.io/github/forks/alejandrogm90/coin-comparator.svg?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/alejandrogm90/coin-comparator.svg?style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/alejandrogm90/coin-comparator.svg?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/alejandrogm90/coin-comparator.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/alejandrogm90/pyspark-example.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/alejandrogm90/pyspark-example.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/alejandrogm90/pyspark-example.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/alejandrogm90/pyspark-example.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/alejandrogm90/pyspark-example.svg?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [python-shield]: https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python&logoColor=white
 
 [profile-url]: https://github.com/alejandrogm90
-[project-url]: https://github.com/alejandrogm90/coin-comparator/
-[wiki-url]: https://github.com/alejandrogm90/coin-comparator/wiki
-[contributors-url]: https://github.com/alejandrogm90/coin-comparator/graphs/contributors
-[forks-url]: https://github.com/alejandrogm90/coin-comparator/network/members
-[stars-url]: https://github.com/alejandrogm90/coin-comparator/stargazers
-[issues-url]: https://github.com/alejandrogm90/coin-comparator/issues
-[license-url]: https://github.com/alejandrogm90/coin-comparator/blob/master/LICENSE.txt
+[project-url]: https://github.com/alejandrogm90/pyspark-example/
+[wiki-url]: https://github.com/alejandrogm90/pyspark-example/wiki
+[contributors-url]: https://github.com/alejandrogm90/pyspark-example/graphs/contributors
+[forks-url]: https://github.com/alejandrogm90/pyspark-example/network/members
+[stars-url]: https://github.com/alejandrogm90/pyspark-example/stargazers
+[issues-url]: https://github.com/alejandrogm90/pyspark-example/issues
+[license-url]: https://github.com/alejandrogm90/pyspark-example/blob/master/LICENSE.txt
 [linkedin-url]: https://www.linkedin.com/in/alejandro-g-762869129/
 [python-url]: https://www.python.org/

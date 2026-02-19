@@ -1,0 +1,11 @@
+version: '3.11'
+
+services:
+  pyspark:
+    build: .
+    volumes:
+      - ./app:/app
+    environment:
+      - PYSPARK_PYTHON=python3
+    # command: python main.py
+    # command: python src/app_3.py data/cities.csv
